@@ -1,0 +1,43 @@
+.square {
+    font-size: 2rem;
+    height: 48px;
+    width: 48px;
+    text-align: center;
+    border: 2px solid var(--color-light-blue);
+    background: none;
+    cursor: pointer;
+    place-items: center;
+}
+
+#correct {
+    border: none;
+    background-color: rgb(3, 164, 100);
+    animation: flips 1s linear;
+}
+
+#allmost {
+    border: none;
+    background-color: rgb(255, 213, 0);
+    animation: flips 1s linear;
+
+
+}
+
+#wrong {
+    border: none;
+    background-color: rgb(72, 72, 72);
+    animation: flips 1s linear;
+
+}
+
+@keyframes flips {
+
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(360deg);
+
+    }
+
+}
