@@ -47,6 +47,11 @@ const Keyboard: React.FC = () => {
             alert('you win !!')
             window.location.reload();
         }
+        if (position >= 30){
+            alert('You lose')
+            window.location.reload();
+
+        }
 
 
 
