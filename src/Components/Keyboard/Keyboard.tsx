@@ -31,26 +31,29 @@ const Keyboard: React.FC = () => {
     }
     const clickEnter = () => {
         console.log(correctWord);
-        
+
 
         if (allWords.includes(boardsWords)) {
             if (position % 5 === 0 && position !== 0) {
                 dispatch(incRow())
 
-                
+
 
             }
-        } else if (!allWords.includes(boardsWords) ) {
+        } else if (!allWords.includes(boardsWords)) {
             alert('Invalid word')
         }
         if (boardsWords.includes(correctWord)) {
             alert('you win !!')
-            window.location.reload();
+            setTimeout(() => {
+                window.location.reload();
+
+            })
         }
-        if (position >= 30){
+        if (position >= 30 && !boardsWords.includes(correctWord)) {
             alert('You lose')
             window.location.reload();
-       
+
         }
 
 
