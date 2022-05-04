@@ -50,7 +50,7 @@ const Keyboard: React.FC = () => {
         if (position >= 30){
             alert('You lose')
             window.location.reload();
-
+       
         }
 
 
